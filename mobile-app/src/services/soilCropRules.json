@@ -1,0 +1,115 @@
+{
+  "Alluvial": {
+    "crops": ["Paddy", "Wheat", "Sugarcane", "Maize"],
+    "waterNeed": "High",
+    "fertility": "Very High",
+    "yieldPerAcre": {
+      "Paddy": 25,
+      "Wheat": 20,
+      "Sugarcane": 350,
+      "Maize": 22
+    },
+    "pricePerQuintal": {
+      "Paddy": 2300,
+      "Wheat": 2150,
+      "Sugarcane": 350,
+      "Maize": 2000
+    }
+  },
+
+  "Red": {
+    "crops": ["Millets", "Groundnut", "Cotton", "Pulses"],
+    "waterNeed": "Medium",
+    "fertility": "Medium",
+    "yieldPerAcre": {
+      "Millets": 10,
+      "Groundnut": 12,
+      "Cotton": 8,
+      "Pulses": 7
+    },
+    "pricePerQuintal": {
+      "Millets": 2800,
+      "Groundnut": 6500,
+      "Cotton": 6200,
+      "Pulses": 7000
+    }
+  },
+
+  "Black": {
+    "crops": ["Cotton", "Soybean", "Jowar"],
+    "waterNeed": "Medium",
+    "fertility": "High",
+    "yieldPerAcre": {
+      "Cotton": 9,
+      "Soybean": 14,
+      "Jowar": 12
+    },
+    "pricePerQuintal": {
+      "Cotton": 6200,
+      "Soybean": 4800,
+      "Jowar": 3000
+    }
+  },
+
+  "Laterite": {
+    "crops": ["Tea", "Coffee", "Cashew", "Rubber"],
+    "waterNeed": "High",
+    "fertility": "Low",
+    "yieldPerAcre": {
+      "Tea": 18,
+      "Coffee": 10,
+      "Cashew": 8,
+      "Rubber": 20
+    },
+    "pricePerQuintal": {
+      "Tea": 2500,
+      "Coffee": 18000,
+      "Cashew": 12000,
+      "Rubber": 15000
+    }
+  },
+
+  "Mountain": {
+    "crops": ["Apple", "Potato", "Barley"],
+    "waterNeed": "Medium",
+    "fertility": "Low",
+    "yieldPerAcre": {
+      "Apple": 40,
+      "Potato": 100,
+      "Barley": 18
+    },
+    "pricePerQuintal": {
+      "Apple": 6000,
+      "Potato": 1400,
+      "Barley": 1900
+    }
+  },
+
+  "Desert": {
+    "crops": ["Bajra", "Guar"],
+    "waterNeed": "Very Low",
+    "fertility": "Very Low",
+    "yieldPerAcre": {
+      "Bajra": 6,
+      "Guar": 5
+    },
+    "pricePerQuintal": {
+      "Bajra": 2500,
+      "Guar": 5500
+    }
+  },
+
+  "Forest": {
+    "crops": ["Spices", "Medicinal Plants"],
+    "waterNeed": "High",
+    "fertility": "Medium",
+    "yieldPerAcre": {
+      "Spices": 6,
+      "Medicinal Plants": 4
+    },
+    "pricePerQuintal": {
+      "Spices": 20000,
+      "Medicinal Plants": 30000
+    }
+  }
+}

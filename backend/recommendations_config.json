@@ -1,0 +1,452 @@
+{
+  "version": "1.1",
+  "logic": "crop + class_id + sensor_conditions",
+  "crops": {
+
+    "tomato": {
+      "class_map": {
+        "0": {
+          "disease": "Bacterial Spot",
+          "conditions": {
+            "temperature": { "min": 24, "max": 32 },
+            "humidity": { "min": 80 },
+            "soil_moisture": { "min": 60 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Small water-soaked spots on leaves",
+              "Dark lesions with yellow halos",
+              "Leaf drop in severe cases"
+            ],
+            "preventive_measures": [
+              "Use certified disease-free seeds",
+              "Avoid overhead irrigation",
+              "Practice crop rotation for 2–3 years",
+              "Disinfect tools regularly"
+            ],
+            "actions": [
+              "Remove and destroy infected leaves",
+              "Reduce field humidity",
+              "Avoid working in wet fields"
+            ],
+            "protection": [
+              "Copper-based bactericides",
+              "Streptomycin (where permitted)"
+            ],
+            "nutrients": {
+              "increase": ["Potassium", "Calcium"],
+              "avoid": ["Excess Nitrogen"]
+            }
+          }
+        },
+
+        "1": {
+          "disease": "Early Blight",
+          "conditions": {
+            "temperature": { "min": 20, "max": 30 },
+            "humidity": { "min": 70 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Brown concentric rings on older leaves",
+              "Yellowing around lesions"
+            ],
+            "preventive_measures": [
+              "Use resistant varieties",
+              "Mulch soil to prevent spore splash",
+              "Ensure proper spacing"
+            ],
+            "actions": [
+              "Remove infected lower leaves",
+              "Avoid excessive leaf wetness"
+            ],
+            "protection": ["Mancozeb", "Chlorothalonil"],
+            "nutrients": {
+              "balance": ["NPK"],
+              "increase": ["Magnesium"]
+            }
+          }
+        },
+
+        "2": {
+          "disease": "Late Blight",
+          "conditions": {
+            "temperature": { "min": 10, "max": 25 },
+            "humidity": { "min": 90 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Water-soaked lesions",
+              "White fungal growth under leaves"
+            ],
+            "preventive_measures": [
+              "Avoid dense planting",
+              "Destroy infected plant debris",
+              "Use resistant hybrids"
+            ],
+            "actions": [
+              "Isolate infected plants immediately",
+              "Stop irrigation temporarily"
+            ],
+            "protection": ["Metalaxyl + Mancozeb"],
+            "nutrients": {
+              "increase": ["Calcium", "Potassium"]
+            }
+          }
+        },
+
+        "3": {
+          "disease": "Leaf Mold",
+          "conditions": {
+            "humidity": { "min": 85 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Yellow patches on upper leaf surface",
+              "Olive-green mold on lower surface"
+            ],
+            "preventive_measures": [
+              "Improve greenhouse ventilation",
+              "Avoid overcrowding"
+            ],
+            "actions": ["Increase airflow"],
+            "protection": ["Copper oxychloride"],
+            "nutrients": {
+              "increase": ["Calcium"]
+            }
+          }
+        },
+
+        "4": {
+          "disease": "Septoria Leaf Spot",
+          "conditions": {
+            "humidity": { "min": 80 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Small gray spots with dark borders",
+              "Premature defoliation"
+            ],
+            "preventive_measures": [
+              "Avoid overhead watering",
+              "Remove crop residues"
+            ],
+            "actions": ["Remove infected debris"],
+            "protection": ["Chlorothalonil"],
+            "nutrients": {
+              "increase": ["Magnesium"]
+            }
+          }
+        },
+
+        "5": {
+          "disease": "Healthy Tomato",
+          "default": true,
+          "recommendations": {
+            "maintenance": [
+              "Maintain optimal irrigation",
+              "Apply balanced fertilizers",
+              "Regular crop monitoring"
+            ]
+          }
+        }
+      }
+    },
+
+    "rice": {
+      "class_map": {
+        "0": {
+          "disease": "Bacterial Leaf Blight",
+          "conditions": {
+            "temperature": { "min": 25, "max": 34 },
+            "humidity": { "min": 80 },
+            "soil_moisture": { "min": 70 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Yellowing from leaf tips",
+              "Milky bacterial ooze"
+            ],
+            "preventive_measures": [
+              "Use resistant varieties",
+              "Avoid excessive nitrogen"
+            ],
+            "actions": ["Drain excess water"],
+            "protection": ["Copper spray"],
+            "nutrients": {
+              "increase": ["Potassium"]
+            }
+          }
+        },
+
+        "1": {
+          "disease": "Brown Spot",
+          "conditions": {
+            "humidity": { "min": 70 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Brown circular spots",
+              "Reduced grain quality"
+            ],
+            "preventive_measures": [
+              "Balanced fertilization",
+              "Seed treatment"
+            ],
+            "actions": ["Improve drainage"],
+            "protection": ["Mancozeb"],
+            "nutrients": {
+              "increase": ["Nitrogen"]
+            }
+          }
+        },
+
+        "2": {
+          "disease": "Leaf Blast",
+          "conditions": {
+            "temperature": { "min": 22, "max": 30 },
+            "humidity": { "min": 85 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Diamond-shaped lesions",
+              "Neck rot in panicles"
+            ],
+            "preventive_measures": [
+              "Use blast-resistant varieties",
+              "Avoid late nitrogen application"
+            ],
+            "actions": ["Reduce nitrogen use"],
+            "protection": ["Tricyclazole"],
+            "nutrients": {
+              "avoid": ["Excess Nitrogen"]
+            }
+          }
+        },
+
+        "3": {
+          "disease": "Sheath Blight",
+          "conditions": {
+            "soil_moisture": { "min": 80 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Oval lesions on sheath",
+              "Lodging in severe cases"
+            ],
+            "preventive_measures": [
+              "Proper plant spacing",
+              "Avoid excessive irrigation"
+            ],
+            "actions": ["Improve spacing"],
+            "protection": ["Validamycin"],
+            "nutrients": {
+              "balance": ["NPK"]
+            }
+          }
+        },
+
+        "4": {
+          "disease": "Rice Tungro Virus",
+          "conditions": {
+            "temperature": { "min": 28 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Stunted growth",
+              "Yellow-orange leaves"
+            ],
+            "preventive_measures": [
+              "Control leafhopper vectors",
+              "Synchronize planting"
+            ],
+            "actions": ["Control leafhoppers"],
+            "protection": ["Insecticide spray"],
+            "nutrients": {
+              "increase": ["Zinc"]
+            }
+          }
+        },
+
+        "5": {
+          "disease": "Healthy Rice",
+          "default": true,
+          "recommendations": {
+            "maintenance": [
+              "Maintain water level",
+              "Balanced nutrient management"
+            ]
+          }
+        }
+      }
+    },
+
+    "sugarcane": {
+      "class_map": {
+        "0": {
+          "disease": "Red Rot",
+          "conditions": {
+            "temperature": { "min": 25, "max": 35 },
+            "humidity": { "min": 75 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Red discoloration of internodes",
+              "White patches inside stalk"
+            ],
+            "preventive_measures": [
+              "Use disease-free setts",
+              "Hot water treatment"
+            ],
+            "actions": ["Remove infected clumps"],
+            "protection": ["Fungicide treatment"],
+            "nutrients": {
+              "increase": ["Potassium"]
+            }
+          }
+        },
+
+        "1": {
+          "disease": "Rust Disease",
+          "conditions": {
+            "humidity": { "min": 80 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Brown pustules on leaves"
+            ],
+            "preventive_measures": [
+              "Resistant varieties",
+              "Good air circulation"
+            ],
+            "actions": ["Improve air circulation"],
+            "protection": ["Propiconazole"],
+            "nutrients": {
+              "balance": ["NPK"]
+            }
+          }
+        },
+
+        "2": {
+          "disease": "Yellow Leaf Disease",
+          "conditions": {
+            "temperature": { "min": 28 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Yellowing of midrib",
+              "Reduced cane weight"
+            ],
+            "preventive_measures": [
+              "Vector control",
+              "Use tolerant varieties"
+            ],
+            "actions": ["Control aphids"],
+            "protection": ["Insecticide spray"],
+            "nutrients": {
+              "increase": ["Nitrogen"]
+            }
+          }
+        },
+
+        "3": {
+          "disease": "Pineapple Disease",
+          "conditions": {
+            "soil_moisture": { "min": 70 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Foul smell from setts",
+              "Poor germination"
+            ],
+            "preventive_measures": [
+              "Avoid waterlogging",
+              "Sett treatment before planting"
+            ],
+            "actions": ["Avoid waterlogging"],
+            "protection": ["Set treatment fungicide"],
+            "nutrients": {
+              "increase": ["Phosphorus"]
+            }
+          }
+        },
+
+        "4": {
+          "disease": "Grassy Shoot Disease",
+          "conditions": {
+            "temperature": { "min": 26 }
+          },
+          "recommendations": {
+            "symptoms": [
+              "Excess tillering",
+              "Grass-like shoots"
+            ],
+            "preventive_measures": [
+              "Use clean planting material",
+              "Rogue infected plants early"
+            ],
+            "actions": ["Remove infected shoots"],
+            "protection": ["Hot water treatment"],
+            "nutrients": {
+              "increase": ["Micronutrients"]
+            }
+          }
+        },
+
+        "5": {
+          "disease": "Healthy Sugarcane",
+          "default": true,
+          "recommendations": {
+            "maintenance": [
+              "Timely irrigation",
+              "Balanced fertilizer application"
+            ]
+          }
+        }
+      }
+    },
+
+    "potato": {
+      "class_map": {
+        "0": {
+          "disease": "Healthy Potato Leaf",
+          "default": true,
+          "recommendations": {
+            "maintenance": [
+              "Monitor leaf health",
+              "Maintain proper spacing"
+            ]
+          }
+        },
+
+        "1": {
+          "disease": "Potato Early Blight",
+          "recommendations": {
+            "preventive_measures": [
+              "Crop rotation",
+              "Avoid leaf wetness"
+            ],
+            "protection": ["Mancozeb"],
+            "nutrients": {
+              "increase": ["Potassium"]
+            }
+          }
+        },
+
+        "2": {
+          "disease": "Potato Late Blight",
+          "recommendations": {
+            "preventive_measures": [
+              "Destroy infected plants",
+              "Use resistant varieties"
+            ],
+            "protection": ["Metalaxyl"],
+            "nutrients": {
+              "increase": ["Calcium"]
+            }
+          }
+        }
+      }
+    }
+  }
+}
